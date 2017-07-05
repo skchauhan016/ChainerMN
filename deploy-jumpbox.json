@@ -177,10 +177,8 @@
             "version": "latest"
           },
           "osDisk": {
-            "createOption": "fromImage",
-            "managedDisk": {
-              "storageAccountType": "Premium_LRS"
-            }
+            "createOption": "fromImage",            
+            "caching": "ReadOnly"
           },
           "dataDisks": "[variables('metadataDiskArray')]"
         },
