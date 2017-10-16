@@ -98,10 +98,10 @@ setup_cuda8_centos()
 	CUDA_RPM=cuda-repo-rhel7-8.0.61-1.x86_64.rpm
 	wget http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/${CUDA_RPM}
 	yum -y  install cuda-repo-rhel7-8.0.61-1.x86_64.rpm
-	#CUDA_RPM=cuda-8.0.61-1.x86_64.rpm
-	#curl -O http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/${CUDA_RPM}
 	wget http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-8.0.61-1.x86_64.rpm
 	yum -y  install cuda-8.0.61-1.x86_64.rpm
+	#CUDA_RPM=cuda-8.0.61-1.x86_64.rpm
+	#curl -O http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/${CUDA_RPM}	
 	#rpm -i ${CUDA_RPM}
 	#yum clean expire-cache
 	#yum -y install cuda
