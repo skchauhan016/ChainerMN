@@ -97,7 +97,8 @@ setup_cuda8_centos()
 	yum -y install dkms
 	#CUDA_RPM=cuda-repo-rhel7-8.0.61-1.x86_64.rpm
 	CUDA_RPM=cuda-8.0.61-1.x86_64.rpm
-	curl -O http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/${CUDA_RPM}
+	#curl -O http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/${CUDA_RPM}
+	http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/${CUDA_RPM}
 	yum -y  install cuda-8.0.61-1.x86_64.rpm
 	#rpm -i ${CUDA_RPM}
 	#yum clean expire-cache
