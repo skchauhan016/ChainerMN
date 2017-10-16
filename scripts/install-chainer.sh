@@ -95,10 +95,12 @@ setup_cuda8_centos()
 	#rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 	rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
 	yum -y install dkms
-	#CUDA_RPM=cuda-repo-rhel7-8.0.61-1.x86_64.rpm
-	CUDA_RPM=cuda-8.0.61-1.x86_64.rpm
+	CUDA_RPM=cuda-repo-rhel7-8.0.61-1.x86_64.rpm
+	http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/${CUDA_RPM}
+	yum -y  install cuda-repo-rhel7-8.0.61-1.x86_64.rpm
+	#CUDA_RPM=cuda-8.0.61-1.x86_64.rpm
 	#curl -O http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/${CUDA_RPM}
-	wget http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/${CUDA_RPM}
+	wget http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-8.0.61-1.x86_64.rpm
 	yum -y  install cuda-8.0.61-1.x86_64.rpm
 	#rpm -i ${CUDA_RPM}
 	#yum clean expire-cache
