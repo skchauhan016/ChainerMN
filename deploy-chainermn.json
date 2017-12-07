@@ -223,6 +223,23 @@
               "caching": "ReadOnly"
             },
             "dataDisks": []
+          },
+          "extensionProfile": {
+            "extensions": [
+              {
+                "name": "installCN",
+                "properties": {
+                  "publisher": "Microsoft.Azure.Extensions",
+                  "type": "CustomScript",
+                  "typeHandlerVersion": "2.0",
+                  "autoUpgradeMinorVersion": true,
+                  "settings": {
+                    "fileUris": "[variables('scriptsToDownload')]",
+                    "commandToExecute": "[variables('commandToExecute')]"
+                  }
+                }
+              }
+            ]
           }
         }
       }
